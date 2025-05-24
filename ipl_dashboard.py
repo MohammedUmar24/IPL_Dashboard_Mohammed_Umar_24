@@ -12,7 +12,8 @@ st.markdown("Explore IPL matches, teams, players, and more!")
 @st.cache_data
 def load_data():
     matches = pd.read_csv("matches.csv")
-    deliveries = pd.read_csv("deliveries.csv")
+    deliveries_url = "https://drive.google.com/file/d/10JDHJf28LAGnZ8REPQ5buNjQrpx1mu9n/view?usp=drive_link"
+    deliveries = pd.read_csv(deliveries_url)
     return matches, deliveries
 
 matches, deliveries = load_data()
